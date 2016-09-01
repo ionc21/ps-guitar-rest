@@ -13,4 +13,9 @@ public class ControllerConfiguration {
 	@ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Invalid Data sent to server")
 	public void notValid() {
 	}
+
+	// @ExceptionHandler()
+	// @ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Manufacturer state should be set true")
+	// public void invalidManufacturerState() {
+	// }
 }

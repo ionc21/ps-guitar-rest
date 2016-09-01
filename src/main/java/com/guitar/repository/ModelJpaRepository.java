@@ -15,6 +15,7 @@ import com.guitar.model.Model;
 import com.guitar.model.projections.ModelDetailView;
 
 @Repository
+@RepositoryRestResource(excerptProjection = ModelDetailView.class)
 public interface ModelJpaRepository extends JpaRepository<Model, Long>, ModelJpaRepositoryCustom {
 	List<Model> findByPriceGreaterThanEqualAndPriceLessThanEqual(BigDecimal low, BigDecimal high);
 

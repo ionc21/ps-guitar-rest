@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 import com.guitar.model.Manufacturer;
 
 @Repository
-@RepositoryRestResource
+@RepositoryRestResource(path = "mfgs", collectionResourceRel = "mfgs")
 @PreAuthorize("hasRole('ROLE_ADMIN')")
 public interface ManufacturerJpaRepository extends JpaRepository<Manufacturer, Long> {
 	List<Manufacturer> findByFoundedDateBefore(Date date);
