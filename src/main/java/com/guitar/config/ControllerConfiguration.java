@@ -14,8 +14,8 @@ public class ControllerConfiguration {
 	public void notValid() {
 	}
 
-	// @ExceptionHandler()
-	// @ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Manufacturer state should be set true")
-	// public void invalidManufacturerState() {
-	// }
+	@ExceptionHandler({ IllegalStateException.class })
+	@ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Manufacturer state should be set true")
+	public void invalidManufacturerState() {
+	}
 }

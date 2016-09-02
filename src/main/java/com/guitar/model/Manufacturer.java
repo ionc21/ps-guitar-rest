@@ -15,7 +15,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedNativeQuery;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -33,9 +32,9 @@ public class Manufacturer {
 	@Column(name = "FOUNDEDDATE")
 	private Date foundedDate;
 
-	@AssertTrue
 	@Column(name = "AVERAGEYEARLYSALES")
 	private BigDecimal averageYearlySales;
+
 	private Boolean active;
 
 	@OneToMany(cascade = CascadeType.ALL)
